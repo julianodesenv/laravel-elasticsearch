@@ -16,3 +16,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::resource('clients','ClientsController');
+Route::get('clients/{clients}/destroy', 'ClientsController@destroy')->name('clients.delete');
